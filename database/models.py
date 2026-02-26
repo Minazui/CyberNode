@@ -8,9 +8,9 @@ class Scan(Base):
     __tablename__ = "scans"
 
     id = Column(Integer, primary_key=True, index=True)
-    device_id = Column(String)
+    device_id = Column(String, index=True)
     ssid = Column(String)
-    bssid = Column(String)
+    bssid = Column(String, index=True)
     rssi = Column(Float)
     channel = Column(Integer)
     timestamp = Column(DateTime, default=datetime.utcnow)
